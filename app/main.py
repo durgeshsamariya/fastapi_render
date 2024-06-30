@@ -33,7 +33,7 @@ def get_book(book_id: int):
 # Endpoint to retrieve all books
 @app.get("/books/")
 def get_all_books():
-    return books_db.values()
+    return list(books_db.values())
 
 # Endpoint to update a book by ID
 @app.put("/books/{book_id}")
